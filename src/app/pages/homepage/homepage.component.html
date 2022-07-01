@@ -1,0 +1,9 @@
+<div class="homescreen">
+  <h2 class="homescreen__title">All Sneakers</h2>
+  <div class="homescreen__products">
+    <app-sneakeritem
+      *ngFor="let sneaker of sneakers"
+      [item]="sneaker"
+    ></app-sneakeritem>
+  </div>
+</div>

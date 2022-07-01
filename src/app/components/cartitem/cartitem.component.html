@@ -1,0 +1,25 @@
+<div class="cartitem">
+  <div class="cartitem__image">
+    <img src="{{ item.imageUrl }}" alt="{{ item.name }}" />
+  </div>
+  <h4 [routerLink]="'/sneaker/' + item.id" class="cartitem__name">
+    <p>{{ item.name }}</p>
+  </h4>
+
+  <p class="cartitem__price">{{ item.unitPrice | currency: "USD" }}</p>
+  <select value="qty" class="cartitem__select">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+  </select>
+  <button class="cartitem__deleteBtn" (click)="deleteItem()">
+    <i class="fas fa-trash"></i>
+  </button>
+</div>

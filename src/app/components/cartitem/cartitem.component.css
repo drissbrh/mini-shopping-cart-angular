@@ -1,0 +1,51 @@
+.cartitem {
+  width: 100%;
+  display: grid;
+  padding: 1rem 1rem 1rem 1.5rem;
+  grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
+  gap: 8px;
+  background-color: #fff;
+  margin-bottom: 1.5rem;
+  border-radius: 9px;
+  border: 2px solid black;
+  place-items: center;
+}
+
+.cartitem__name {
+  text-decoration: none;
+  cursor: pointer;
+  color: #00072d;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.cartitem__price {
+  font-weight: 500;
+}
+
+.cartitem__image > img {
+  width: 105px;
+}
+
+.cartitem__select {
+  border-radius: 5px;
+  padding: 1rem 15px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.cartitem__deleteBtn {
+  width: 55px;
+  height: 55px;
+  border: 2px solid #0a2472;
+  background-color: #0a2472;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.cartitem__deleteBtn:hover {
+  color: red;
+  background-color: #fff;
+}

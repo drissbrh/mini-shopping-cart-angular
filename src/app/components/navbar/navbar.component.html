@@ -1,0 +1,19 @@
+<nav class="navbar">
+  <div class="navbar__logo">
+    <h1 routerLink="/">MySneakers</h1>
+  </div>
+  <ul class="navbar__links">
+    <li routerLink="/">Shop</li>
+    <li routerLink="cart" class="cart__link">
+      <i class="fas fa-shopping-cart"></i>
+
+      <span class="cartlogo__badge">{{ totalQuantity }}</span>
+    </li>
+    <li routerLink="login">Sign In</li>
+  </ul>
+  <div class="threeLines" (click)="bigBlack()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</nav>

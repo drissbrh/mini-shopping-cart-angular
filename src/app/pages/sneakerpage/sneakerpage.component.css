@@ -1,0 +1,149 @@
+.productscreen {
+  max-width: 1700px;
+  margin: 5rem auto;
+  display: flex;
+}
+
+.productscreen__inside {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.right__info > p > select {
+  cursor: pointer;
+}
+.left__image {
+  padding: 0rem 1rem;
+  margin: 1rem;
+  flex: 0.6;
+
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.left__image > img {
+  width: 100%;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.spinner {
+  width: 200px;
+  height: 200px;
+  border-left: 4px solid #0e6ba8;
+  border-radius: 100px;
+  animation: spin 0.8s linear infinite;
+}
+
+.left__info {
+  margin: 1rem;
+  flex: 0.4;
+  background: white;
+  height: fit-content;
+  font-size: 1.2rem;
+  font-weight: 300;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.left__name {
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.left__info > p > span {
+  font-weight: 500;
+}
+.left__info > h3 {
+  padding: 1.2rem;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.left__info > p,
+.right__info > p {
+  padding: 1.2rem;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.left__info > p:last-child,
+.right__info > p:last-child {
+  border: none;
+}
+
+.right__info {
+  width: 300px;
+  margin: 1rem;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.right__info p {
+  padding: 1.2rem;
+  font-size: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.right__info p > button {
+  grid-column: 1/-1;
+  width: 100%;
+  padding: 20px 0px;
+  border-radius: 5px;
+  border: 2px solid #f72585;
+  background-color: #f72585;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.right__info p > button:hover {
+  color: #f72585;
+  border: 2px solid #f72585;
+  background-color: transparent;
+}
+
+.right__info select {
+  padding: 10px 16px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+@media (max-width: 960px) {
+  .productscreen {
+    flex-direction: column;
+  }
+
+  .productscreen__inside {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .left__image {
+    flex: 1;
+  }
+
+  .left__info {
+    flex: 1;
+  }
+
+  .productscreen__right {
+    flex: 1;
+    padding: 1rem;
+  }
+
+  .right__info {
+    width: 100%;
+    margin: 0;
+  }
+}

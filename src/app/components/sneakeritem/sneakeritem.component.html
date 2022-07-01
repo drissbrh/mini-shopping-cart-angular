@@ -1,0 +1,15 @@
+<div class="sneaker" *ngIf="item">
+  <img [src]="item.media" [alt]="item.name" />
+  <div class="sneaker__info">
+    <p class="info__name">{{ item.name }}</p>
+    <p class="info__brand">Brand: {{ item.brand }}</p>
+    <p class="info__color">{{ item.colorway }}</p>
+    <p class="info__year">Year:{{ item.year }}</p>
+
+    <p class="info__price">{{ item.retailPrice | currency: "EUR" }}</p>
+
+    <button [routerLink]="'/sneaker/' + item._id" class="info__button">
+      More
+    </button>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div
+  [ngClass]="{
+    sidedrawershow: showSideDrawer === true,
+    sidedrawer: showSideDrawer === false
+  }"
+>
+  <ul class="sidedrawer__links" (click)="clickIt()">
+    <li routerLink="/">Shop</li>
+    <li routerLink="/cart">
+      <i class="fas fa-shopping-cart"></i>
+      <span>
+        Cart
+        <span class="sidedrawer__cartbadge">{{ totalQuantity }}</span>
+      </span>
+    </li>
+
+    <li routerLink="/login">Sign In</li>
+  </ul>
+</div>

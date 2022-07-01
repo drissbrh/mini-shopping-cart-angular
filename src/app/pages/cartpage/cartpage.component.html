@@ -1,0 +1,26 @@
+<div class="cartscreen">
+  <div class="cartscreen__left">
+    <h2>Shopping Cart</h2>
+    <ng-container *ngIf="cartItems.length > 0">
+      <ng-container *ngFor="let item of cartItems">
+        <app-cartitem
+          [item]="item"
+          (removeEmitter)="remove(item)"
+        ></app-cartitem>
+      </ng-container>
+    </ng-container>
+    <h1 *ngIf="cartItems.length === 0">
+      Nothing is in the cart 🥺
+      <p routerLink="/" class="shop__link">Visit Shop</p>
+    </h1>
+  </div>
+  <div class="cartscreen__right">
+    <div class="cartscreen__info">
+      <p>Subtotal : {{ totalQuantity }} items</p>
+      <p>Total: {{ totalPrice | currency: "USD" }}</p>
+    </div>
+    <div>
+      <button>Proceed To Checkout</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="productscreen" *ngIf="sneaker">
+  <div class="productscreen__inside">
+    <div class="left__image">
+      <img [src]="sneaker.media" [alt]="sneaker.name" />
+    </div>
+
+    <div class="left__info">
+      <h3 className="left__name">{{ sneaker.name }}</h3>
+      <p><span>Title:</span> {{ sneaker.title }}</p>
+      <p>{{ sneaker.colorway }}</p>
+    </div>
+    <div class="productscreen__right">
+      <div class="right__info">
+        <p>
+          Price:<span>{{ sneaker.retailPrice | currency: "USD" }}</span>
+        </p>
+        <p>Status:<span> In Stock</span></p>
+        <p>QTY</p>
+        <p>
+          <button routerLink="/cart" (click)="addToCartHandler()">
+            Add To Cart
+          </button>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

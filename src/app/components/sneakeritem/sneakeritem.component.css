@@ -1,0 +1,71 @@
+.sneaker {
+  width: 300px;
+  height: 510px;
+  padding: 1rem;
+  background-color: #fefefe;
+  border-radius: 5px;
+  border: 2px solid black;
+  /* box-shadow: 0 1px 40px rgba(0, 0, 0, 0.1); */
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.sneaker > img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.sneaker__info > p {
+  margin-bottom: 8px;
+}
+
+.info__name {
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding-top: 1.9rem;
+  overflow: hidden;
+}
+
+.info__price {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.info__button {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #00072d;
+  padding: 8px 6px;
+  margin: 2rem auto;
+  width: 100%;
+  border-radius: 5px;
+  font-family: "Ubuntu";
+  cursor: pointer;
+  background-color: #f4f4f4;
+  border: 2px solid #00072d;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: 0.2s ease-in-out;
+}
+.info__button:hover {
+  background-color: #0a2472;
+  color: #f4f4f4;
+}
+
+@media (max-width: 1000px) {
+  .sneaker {
+    width: 350px;
+  }
+}
+
+@media (max-width: 800px) {
+  .sneaker {
+    width: 400px;
+  }
+}
